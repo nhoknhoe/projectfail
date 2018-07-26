@@ -29,17 +29,18 @@ export class ListEmployeeComponent implements OnInit {
   load(){
     this.dataEmployee = this.dataService.getLists();
   }
-  _id: string;
 
   @ViewChild(DeleteComponent)
   del : DeleteComponent;
 
   outObj:any;
   show(obj){
-    this.del.openModal();
+    // console.log(this.del);
+    // debugger;
+    this.del.openModal(obj);
+
     this.outObj = obj;
   }
-
     deleted: boolean = false;
     obj_del: string;
     onDelete(msg){

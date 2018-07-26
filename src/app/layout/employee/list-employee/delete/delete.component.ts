@@ -20,8 +20,12 @@ modalRef:BsModalRef;
   ngOnInit() {
     
   }
-  openModal() {
+  openModal(obj:any) {
+    // debugger;
     // this.modalRef = this.modalService.show(this.template,{class: 'modal-sm'});
+    // console.log(obj.fname);
+    this.data = obj;
+    debugger;
       this.modalRef = this.modalService.show(this.template);
   }
   confirm() {

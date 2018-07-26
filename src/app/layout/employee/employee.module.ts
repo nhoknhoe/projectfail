@@ -7,6 +7,8 @@ import {DetailEmployeeComponent} from './detail-employee/detail-employee.compone
 import {EmployeeService} from './Employee.service';
 import { FormsModule, ReactiveFormsModule,FormControl,Validators } from '@angular/forms';
 import { DeleteComponent } from './list-employee/delete/delete.component';
+import {ModalModule} from 'ngx-bootstrap';
+import {BsModalService} from 'ngx-bootstrap/modal'
 // import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
@@ -14,12 +16,15 @@ import { DeleteComponent } from './list-employee/delete/delete.component';
     CommonModule,
     EmployeeRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot()
+
   ],
   providers: [
     EmployeeService,
     ListEmployeeComponent,
-    DetailEmployeeComponent
+    DetailEmployeeComponent,
+    BsModalService
   ],
   declarations: [ListEmployeeComponent,EmployeeComponent,DetailEmployeeComponent, DeleteComponent]
 })
