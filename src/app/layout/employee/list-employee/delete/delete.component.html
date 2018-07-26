@@ -1,0 +1,41 @@
+<!-- 
+      <div id="myModal" class="modal fade" role="dialog" [ngStyle]="{'display':display}" > 
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" (click)="delete(item.uuid)" data-dismiss="modal">Xóa</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>  -->
+
+    <!-- <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button> -->
+            <!-- <h4 class="modal-title">Thông báo</h4>
+          </div>
+          <div class="modal-body">
+            <p>Bạn có chắc xóa : {{name}} </p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" (click)="delete()" >Có</button>
+            <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Không</button>
+          </div>
+        </div><! /.modal-content -->
+      <!-- </div>/.modal-dialog -->
+    <!-- </div>/.modal ! --> 
+    <ng-template #template>
+      <div class="modal-body text-center">
+        <p>Bạn có chắc là đồng ý muốn xóa <b>{{data.fname + " " + data.lname}}</b> ?</p>
+        <button type="button" class="btn btn-default" (click)="confirm()" >Yes</button>
+        <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+      </div>
+    </ng-template>
+    
